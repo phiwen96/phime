@@ -38,7 +38,7 @@ set_target_properties(phime-shared
     SOVERSION ${PROJECT_VERSION_MAJOR}
     OUTPUT_NAME "phime"
     DEBUG_POSTFIX "_d"
-    PUBLIC_HEADER "phime.hpp"
+    PUBLIC_HEADER "${PROJECT_SOURCE_DIR}/include/phime/phime.hpp"
     MACOSX_RPATH ON
     WINDOWS_EXPORT_ALL_SYMBOLS ON
   )
