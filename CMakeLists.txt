@@ -6,6 +6,8 @@ project (phime
     DESCRIPTION "Very nice project"
 )
 
+add_subdirectory (cmake/phake)
+
 if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 	set (CMAKE_CXX_STANDARD 20)
 	set (CMAKE_CXX_STANDARD_REQUIRED ON)
