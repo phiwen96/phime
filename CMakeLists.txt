@@ -60,6 +60,7 @@ endif ()
 install(
   TARGETS
     phime-shared
+    phime-static
     phime-app
   ARCHIVE
     DESTINATION ${INSTALL_LIBDIR}
