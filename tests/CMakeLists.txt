@@ -8,3 +8,20 @@ ph_precompile (TARGET phime
   PCH 
     ${std_pch} 
 )
+
+
+add_test (
+    NAME test 
+    COMMAND $<TARGET_FILE:phime_test> --success
+)
+
+
+
+
+
+
+
+
+
+
+#cmake -Wno-dev -DCMAKE_CONFIGURATION_TYPES="Debug;Release;Kuk" -S . -B xbuild -GXcode && cmake --open xbuild
