@@ -42,6 +42,7 @@ endif ()
 
 
 add_subdirectory (src)
+add_subdirectory (apps)
 
 
 if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
@@ -49,3 +50,29 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     enable_testing ()
     add_subdirectory (tests)
 endif ()
+
+
+
+
+
+
+##### INSTALLATION #####
+install(
+  TARGETS
+    phime-shared
+    phime-app
+  ARCHIVE
+    DESTINATION ${INSTALL_LIBDIR}
+    COMPONENT lib
+  RUNTIME
+    DESTINATION ${INSTALL_BINDIR}
+    COMPONENT bin
+  LIBRARY
+    DESTINATION ${INSTALL_LIBDIR}
+COMPONENT lib
+  PUBLIC_HEADER
+    DESTINATION ${INSTALL_INCLUDEDIR}/phime
+    COMPONENT dev
+)
+
+
